@@ -1,0 +1,33 @@
+.logout-container {
+  display: flex;
+  padding: 25px;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 30px;
+}
+.logout-btn {
+  background-color: #dc2626;
+  border: 0ch;
+  outline: none;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-right: 30px;
+}
+
+.logout-logo {
+  background-color: #fef3c7;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  border: 0ch;
+  outline: none;
+  color: #333b69;
+  padding: 8px;
+  border-radius: 8px;
+  margin-right: 30px;
+  border: 1px solid #cbd5e1;
+}

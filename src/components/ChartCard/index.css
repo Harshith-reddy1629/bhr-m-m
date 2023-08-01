@@ -1,0 +1,11 @@
+.chart-loader {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.debit-credit-overview {
+  font-size: 25px;
+  margin-left: 8px;
+}

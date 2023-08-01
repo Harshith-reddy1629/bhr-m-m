@@ -1,0 +1,37 @@
+.transactions-route-container {
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+.transactions-container {
+  padding: 18px;
+  background-color: #fff;
+  border-radius: 18px;
+  margin: 16px;
+  width: 95%;
+}
+
+.transaction-heading-text {
+  text-align: start;
+  color: #343c6a;
+}
+.txn-btn {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  margin-left: 15px;
+  margin-right: 30px;
+  padding-bottom: 4px;
+  color: #718ebf;
+}
+.active-txn-btn {
+  border-bottom: 2px solid #2d60ff;
+  color: #2d60ff;
+}
+
+.btns-container {
+  padding: 8px;
+  background-color: #fff;
+  z-index: 3;
+  position: relative;
+  top: -2px;
+}

@@ -1,0 +1,38 @@
+.debit-container {
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 20px;
+  margin-bottom: 0;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 0;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.debit-image {
+  height: 160px;
+}
+@media (max-width: 575px) {
+  .debit-container {
+    margin-left: 0px;
+    padding-left: 20px;
+  }
+  .debit-image {
+    height: 80px;
+  }
+}
+.debit-amount-text {
+  display: flex;
+  align-items: center;
+  color: #fe5c73;
+  margin-bottom: 0;
+}
+
+.debit-text {
+  color: #718ebf;
+  margin: 0;
+  margin-left: 9px;
+}

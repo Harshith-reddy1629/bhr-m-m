@@ -1,0 +1,13 @@
+.failed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.failed-btn {
+  background-color: transparent;
+  border: 2px solid rgb(233, 18, 18);
+  color: rgb(233, 18, 18);
+  padding: 8px;
+  border-radius: 12px;
+}

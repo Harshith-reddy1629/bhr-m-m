@@ -1,0 +1,39 @@
+.transaction-item-row {
+  height: 40px;
+  color: #505887;
+}
+.txnname {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 60px;
+}
+
+.edit-btn {
+  background-color: transparent;
+  border: 0ch;
+  outline: none;
+  color: #505887;
+}
+.delete-btn {
+  color: #fe5c73;
+  background-color: transparent;
+  border: 0ch;
+  outline: none;
+}
+
+.debit-amount-text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 50px;
+  color: #fe5c73;
+}
+
+.credit-amount-text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 50px;
+  color: #16dbaa;
+}

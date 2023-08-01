@@ -1,0 +1,19 @@
+.creditdebit-container {
+  display: flex;
+}
+
+@media (max-width: 575px) {
+  .creditdebit-container {
+    flex-direction: column;
+  }
+}
+
+.loader {
+  background-color: #fff;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 20px;
+}
