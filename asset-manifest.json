@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bhr-moneymatters/static/css/main.12f0d706.css",
-    "main.js": "/bhr-moneymatters/static/js/main.0e8d21db.js",
-    "static/js/121.c41f6dc5.chunk.js": "/bhr-moneymatters/static/js/121.c41f6dc5.chunk.js",
-    "index.html": "/bhr-moneymatters/index.html",
-    "main.12f0d706.css.map": "/bhr-moneymatters/static/css/main.12f0d706.css.map",
-    "main.0e8d21db.js.map": "/bhr-moneymatters/static/js/main.0e8d21db.js.map",
-    "121.c41f6dc5.chunk.js.map": "/bhr-moneymatters/static/js/121.c41f6dc5.chunk.js.map"
+    "main.css": "/bhr-m-m/static/css/main.12f0d706.css",
+    "main.js": "/bhr-m-m/static/js/main.61960727.js",
+    "static/js/121.c41f6dc5.chunk.js": "/bhr-m-m/static/js/121.c41f6dc5.chunk.js",
+    "index.html": "/bhr-m-m/index.html",
+    "main.12f0d706.css.map": "/bhr-m-m/static/css/main.12f0d706.css.map",
+    "main.61960727.js.map": "/bhr-m-m/static/js/main.61960727.js.map",
+    "121.c41f6dc5.chunk.js.map": "/bhr-m-m/static/js/121.c41f6dc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.12f0d706.css",
-    "static/js/main.0e8d21db.js"
+    "static/js/main.61960727.js"
   ]
 }
