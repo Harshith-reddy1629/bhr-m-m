@@ -1,7 +1,7 @@
 .sidebar-container {
-  position: relative;
+  position: static;
   width: 250px;
-  height: 100vh;
+  height: 100dvh;
   border-right: 1px solid #e2e2e2;
   background-color: #fff;
 }

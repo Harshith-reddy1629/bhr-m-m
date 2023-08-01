@@ -7,6 +7,7 @@ import TransactionsRouteListItems from "../TransactionsRouteListItems";
 import "./index.css";
 import FailedView from "../FailedView";
 import LoaderView from "../LoaderView";
+import EmptyView from "../EmptyView";
 
 const statusOfPage = {
   Loading: "LOADING",
@@ -155,20 +156,28 @@ class TransactionRouteList extends Component {
             Credit
           </button>
         </div>
-        <table className="transactions-container">
-          <tr>
-            {isAdmin && <th className="transaction-heading-text">User Name</th>}
-            <th className="transaction-heading-text">Transaction Name</th>
-            <th className="transaction-heading-text">Category</th>
-            <th className="transaction-heading-text">Date</th>
-            <th className="transaction-heading-text">Amount</th>
-            <th> </th>
-            <th> </th>
-          </tr>
-          {filteredlist.map((each) => (
-            <TransactionsRouteListItems key={each.id} item={each} />
-          ))}
-        </table>
+        {filteredlist.length === 0 ? (
+          <div className="empty-view">
+            <EmptyView />
+          </div>
+        ) : (
+          <table className="transactions-container">
+            <tr>
+              {isAdmin && (
+                <th className="transaction-heading-text">User Name</th>
+              )}
+              <th className="transaction-heading-text">Transaction Name</th>
+              <th className="transaction-heading-text">Category</th>
+              <th className="transaction-heading-text">Date</th>
+              <th className="transaction-heading-text">Amount</th>
+              <th> </th>
+              <th> </th>
+            </tr>
+            {filteredlist.map((each) => (
+              <TransactionsRouteListItems key={each.id} item={each} />
+            ))}
+          </table>
+        )}
       </div>
     );
   };

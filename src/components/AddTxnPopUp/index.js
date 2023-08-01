@@ -6,6 +6,13 @@ import Cookies from "js-cookie";
 
 import { AiOutlinePlus } from "react-icons/ai";
 
+import "react-notifications/lib/notifications.css";
+
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+
 import "reactjs-popup/dist/index.css";
 
 import "./index.css";
@@ -87,7 +94,7 @@ class AddTxnPopUp extends Component {
     if (isEveryFieldOkay === true) {
       this.AddTxn();
     } else {
-      alert("Enter Valid Inputs");
+      NotificationManager.error("Enter valid Input");
       return;
     }
   };
@@ -107,12 +114,16 @@ class AddTxnPopUp extends Component {
 
     const reqUrl = `https://bursting-gelding-24.hasura.app/api/rest/add-transaction?name=${txnName}&type=${txnType}&category=${category}&amount=${amount}&date=${d}&user_id=${userId}`;
     var myHeaders = new Headers();
+
     myHeaders.append("content-type", "application/json");
+
     myHeaders.append(
       "x-hasura-admin-secret",
       "g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF"
     );
+
     myHeaders.append("x-hasura-role", "user");
+
     myHeaders.append("x-hasura-user-id", `${userId}`);
 
     var requestOptions = {
@@ -120,14 +131,20 @@ class AddTxnPopUp extends Component {
       headers: myHeaders,
       redirect: "follow",
     };
-    try {
-      await fetch(reqUrl, requestOptions);
-
-      alert("Added Successfully");
-    } catch (error) {
-      alert("Something went Wrong");
-      return;
-    }
+    fetch(reqUrl, requestOptions)
+      .then(
+        NotificationManager.success(
+          "Page will be reloaded to update in portal",
+          "Added Successfully"
+        )
+      )
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        alert("Something went Wrong");
+        return;
+      });
   };
 
   render() {
@@ -190,10 +207,15 @@ class AddTxnPopUp extends Component {
                     onChange={this.onCategorySelection}
                   >
                     <option value="Food">Food</option>
+
                     <option value="Shopping">Shopping</option>
+
                     <option value="Materials">Materials</option>
+
                     <option value="Books">Books</option>
+
                     <option value="Grocery">Grocery</option>
+
                     <option value="Transfer">Transfer</option>
                   </select>
                 </div>
@@ -229,6 +251,7 @@ class AddTxnPopUp extends Component {
                   </button>
                 </div>
               </form>
+              <NotificationContainer />
             </div>
           )}
         </Popup>

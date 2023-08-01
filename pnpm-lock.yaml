@@ -11,6 +11,7 @@ specifiers:
   react-dom: ^18.2.0
   react-icons: ^4.10.1
   react-loader-spinner: ^5.3.4
+  react-notifications: ^1.7.4
   react-router-dom: 6.14.2
   react-scripts: 5.0.1
   reactjs-popup: ^2.0.5
@@ -28,6 +29,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.10.1_react@18.2.0
   react-loader-spinner: 5.3.4_react-dom@18.2.0+react@18.2.0
+  react-notifications: 1.7.4_react-dom@18.2.0+react@18.2.0
   react-router-dom: 6.14.2_react-dom@18.2.0+react@18.2.0
   react-scripts: 5.0.1_react@18.2.0
   reactjs-popup: 2.0.5_react-dom@18.2.0+react@18.2.0
@@ -3044,6 +3046,12 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: false
 
+  /acorn/6.4.1:
+    resolution: {integrity: sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: false
+
   /acorn/7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
     engines: {node: '>=0.4.0'}
@@ -4589,6 +4597,13 @@ packages:
     resolution: {integrity: sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA==}
     dependencies:
       '@babel/runtime': 7.22.6
+    dev: false
+
+  /dom-helpers/5.2.1:
+    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
+    dependencies:
+      '@babel/runtime': 7.22.6
+      csstype: 3.1.2
     dev: false
 
   /dom-serializer/0.2.2:
@@ -8860,6 +8875,18 @@ packages:
       - '@babel/core'
     dev: false
 
+  /react-notifications/1.7.4_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-dsR7mUQfe8YdFLqVsjT0GFd4n26UWkzefdjMELfEVygjuuyU6ZZ0LpZhFHdfmraGeBFLWHNxygpGlHHituUyjQ==}
+    dependencies:
+      acorn: 6.4.1
+      classnames: 2.3.2
+      prop-types: 15.8.1
+      react-transition-group: 4.4.5_react-dom@18.2.0+react@18.2.0
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
+
   /react-refresh/0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
@@ -9017,6 +9044,20 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-lifecycles-compat: 3.0.4
+    dev: false
+
+  /react-transition-group/4.4.5_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
+    peerDependencies:
+      react: '>=16.6.0'
+      react-dom: '>=16.6.0'
+    dependencies:
+      '@babel/runtime': 7.22.6
+      dom-helpers: 5.2.1
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react/18.2.0:

@@ -8,6 +8,13 @@ import { LuAlertTriangle } from "react-icons/lu";
 
 import { HiOutlineTrash } from "react-icons/hi";
 
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+
+import "react-notifications/lib/notifications.css";
+
 import "reactjs-popup/dist/index.css";
 
 import "./index.css";
@@ -45,13 +52,15 @@ class DeletePopup extends Component {
       redirect: "follow",
     };
 
-    try {
-      await fetch(ReqUrl, requestOptions);
-      window.location.reload(true);
-    } catch (error) {
-      alert("Cannot Delete");
-      return;
-    }
+    fetch(ReqUrl, requestOptions)
+      .then(
+        NotificationManager.warning(
+          "Page will be reloaded",
+          "Transaction deleted"
+        )
+      )
+      .then(() => window.location.reload(true))
+      .catch((err) => alert("Cannot Delete"));
   };
 
   render() {
@@ -67,6 +76,7 @@ class DeletePopup extends Component {
         >
           {(close) => (
             <div className="logout-container">
+              <NotificationContainer />
               <LuAlertTriangle
                 color="#D97706"
                 size={40}

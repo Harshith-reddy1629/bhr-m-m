@@ -35,3 +35,6 @@
   position: relative;
   top: -2px;
 }
+.empty-view {
+  height: 70%;
+}

@@ -9,7 +9,7 @@ const CreditBox = (props) => {
 
   return (
     <div className="credit-container">
-      <div>
+      <div className="credit-amount-container">
         <h1 className="credit-amount-text">
           <BsCurrencyDollar />
           {sum}

@@ -9,6 +9,7 @@ const ProfileBox = () => {
   const userCreds = Cookies.get("secret_token");
 
   const parsedObject = JSON.parse(userCreds);
+
   const { userId } = parsedObject;
 
   const userO = UserList.find((each) => each.id === userId);
@@ -22,11 +23,14 @@ const ProfileBox = () => {
           src="https://res.cloudinary.com/reddyimgs/image/upload/v1687011162/Avatar_zhzj4v.png"
           alt="profile"
         />
+
         <div className="user-info">
           <h1 className="user-text">{name}</h1>
+
           <p>{email}</p>
         </div>
       </div>
+
       <LogoutBtn className="logout" />
     </div>
   );

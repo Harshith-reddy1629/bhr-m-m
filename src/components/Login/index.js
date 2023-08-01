@@ -4,6 +4,11 @@ import { Navigate } from "react-router-dom";
 
 import Cookies from "js-cookie";
 
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+
 import "./index.css";
 
 class Login extends Component {
@@ -73,10 +78,13 @@ class Login extends Component {
 
       if (user.id !== undefined) {
         if (isAdminLogging) {
-          user.id === 3 ? this.submissionSuccess(user.id) : this.getErrorMsg();
+          user.id === 3
+            ? this.submissionSuccess(user.id)
+            : NotificationContainer.error("User cannot login as Admin");
+          return;
         } else {
           if (user.id === 3) {
-            alert("Cannot be logged as User");
+            this.getErrorMsg();
             return;
           } else {
             this.submissionSuccess(user.id);
@@ -96,12 +104,12 @@ class Login extends Component {
     const { username, password } = this.state;
 
     if (username.trim() === "") {
-      alert("Username cannot be empty");
-      this.getErrorMsg();
+      NotificationManager.warning("Username cannot be empty");
+
       return;
     }
     if (password.trim() === "") {
-      alert("Enter Password");
+      NotificationManager.warning("Enter Password");
       return;
     }
 
@@ -141,14 +149,14 @@ class Login extends Component {
             <button
               type="button"
               onClick={this.onUser}
-              className={`logger-btn ${!isAdminLogging && "active-logger"}`}
+              className={`logger-btn ${isAdminLogging && "inactive-logger"}`}
             >
               Login as User
             </button>
             <button
               type="button"
               onClick={this.onAdmin}
-              className={`logger-btn ${isAdminLogging && "active-logger"}`}
+              className={`logger-btn ${!isAdminLogging && "inactive-logger"}`}
             >
               Login as Admin
             </button>
@@ -163,6 +171,7 @@ class Login extends Component {
                 placeholder="Enter mail"
                 onChange={this.onTypingEmail}
               />
+              <NotificationContainer />
             </div>
             <div className="login-input-container">
               <label>PASSWORD </label>
@@ -184,7 +193,6 @@ class Login extends Component {
       </div>
     ) : (
       <Navigate to="/" replace={true} />
-      //   window.location.replace("/")
     );
   }
 }

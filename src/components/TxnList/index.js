@@ -7,6 +7,7 @@ import TransactionsRouteListItems from "../TransactionsRouteListItems";
 import "./index.css";
 import FailedView from "../FailedView";
 import LoaderView from "../LoaderView";
+import EmptyView from "../EmptyView";
 
 const TxnListStatus = {
   Loading: "LOADING",
@@ -45,12 +46,16 @@ class TxnList extends Component {
       "https://bursting-gelding-24.hasura.app/api/rest/all-transactions?limit=100&offset=0";
 
     var myHeaders = new Headers();
+
     myHeaders.append("content-type", "application/json");
+
     myHeaders.append(
       "x-hasura-admin-secret",
       "g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF"
     );
+
     myHeaders.append("x-hasura-role", role);
+
     myHeaders.append("x-hasura-user-id", `${userId}`);
 
     var requestOptions = {
@@ -108,7 +113,10 @@ class TxnList extends Component {
     const { ListOfTransactions } = this.state;
 
     const threeTxns = ListOfTransactions.slice(0, 3);
-    return (
+
+    return threeTxns.length === 0 ? (
+      <EmptyView />
+    ) : (
       <table className="transactions-container">
         {threeTxns.map((each) => (
           <TransactionsRouteListItems key={each.id} item={each} />
