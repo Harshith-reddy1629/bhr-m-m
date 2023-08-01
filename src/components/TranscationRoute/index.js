@@ -17,7 +17,7 @@ const TransactionRoute = () => {
       </div>
     </div>
   ) : (
-    <Navigate to="/login" />
+    <Navigate to="/login" replace={true} />
   );
 };
 

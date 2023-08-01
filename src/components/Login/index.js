@@ -37,7 +37,7 @@ class Login extends Component {
     });
     <Navigate to="/" replace={true} />;
 
-    window.location.replace("/");
+    window.location.reload();
   };
 
   fetching = async () => {
@@ -183,8 +183,8 @@ class Login extends Component {
         </div>
       </div>
     ) : (
-      //   <Navigate to="/" />
-      window.location.replace("/")
+      <Navigate to="/" replace={true} />
+      //   window.location.replace("/")
     );
   }
 }
