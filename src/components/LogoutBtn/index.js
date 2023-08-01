@@ -20,7 +20,7 @@ class LogoutBtn extends Component {
 
     <Navigate to="/login" replace={true} />;
 
-    // window.location.reload();
+    window.location.reload();
   };
 
   render() {
