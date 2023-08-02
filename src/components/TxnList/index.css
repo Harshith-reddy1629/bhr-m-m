@@ -3,3 +3,16 @@
   padding: 12px;
   border-radius: 18px;
 }
+
+@media (max-width: 575px) {
+  .transactions-container {
+    background-color: red;
+    width: 700px !important;
+    padding: 0%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .recent-txn-card {
+    overflow-x: scroll;
+  }
+}

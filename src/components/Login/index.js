@@ -73,6 +73,7 @@ class Login extends Component {
       );
 
       const result = await response.json();
+      console.log(result.get_user_id[0].id, "res login");
 
       const user = result.get_user_id[0];
 
@@ -95,6 +96,7 @@ class Login extends Component {
       }
     } catch (error) {
       this.setState({ isAnyFieldEmpty: true });
+      console.log(error);
     }
   };
 

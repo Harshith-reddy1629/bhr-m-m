@@ -54,7 +54,7 @@ class DeletePopup extends Component {
 
     fetch(ReqUrl, requestOptions)
       .then(
-        NotificationManager.warning(
+        NotificationManager.success(
           "Page will be reloaded",
           "Transaction deleted"
         )

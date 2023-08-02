@@ -9,6 +9,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
   gap: 30px;
+  margin-top: 10px;
 }
 
 .empty-view-image {
@@ -17,4 +18,13 @@
 
 .no-txns-text {
   font-family: cursive;
+}
+
+@media (max-width: 575px) {
+  .empty-view {
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
 }

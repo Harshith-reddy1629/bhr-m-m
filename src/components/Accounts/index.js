@@ -16,7 +16,9 @@ const Accounts = () => {
   const displayView = () => (
     <div className="account-container">
       <CreditDebit />
+
       <TransactionsCard />
+
       <ChartCard />
     </div>
   );

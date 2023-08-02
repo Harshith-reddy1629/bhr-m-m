@@ -5,6 +5,10 @@
 @media (max-width: 575px) {
   .creditdebit-container {
     flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center;
+    min-width: fit-content; */
   }
 }
 

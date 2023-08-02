@@ -36,5 +36,35 @@
   top: -2px;
 }
 .empty-view {
-  height: 70%;
+  height: 80%;
+}
+
+@media (max-width: 575px) {
+  .transactions-route-container {
+    height: calc(100vh - 200px);
+  }
+  .txn-card {
+    overflow-x: scroll;
+    height: calc(100vh - 239px);
+  }
+  .btns-container {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .txn-btn {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 0px;
+    color: #718ebf;
+  }
+  .active-txn-btn {
+    border-bottom: 2px solid #2d60ff;
+    padding-bottom: 4px;
+    color: #2d60ff;
+  }
 }

@@ -12,6 +12,11 @@
 @media (max-width: 575px) {
   .account-container {
     width: 100vw;
+    margin: 0;
+    min-height: fit-content;
+  }
+  .txn-card {
+    overflow-x: scroll;
   }
 }
 

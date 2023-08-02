@@ -17,7 +17,7 @@
 }
 @media (max-width: 575px) {
   .debit-container {
-    margin-left: 0px;
+    margin-left: 10px;
     padding-left: 20px;
   }
   .debit-image {

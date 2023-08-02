@@ -55,3 +55,18 @@
 .span-el {
   color: rgb(234, 30, 30);
 }
+.popup-content {
+  width: 450px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  border-radius: 12px;
+}
+
+@media (max-width: 575px) {
+  .add-txn-popup-container {
+    padding: 8px;
+  }
+  .popup-content {
+    width: 270px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  }
+}

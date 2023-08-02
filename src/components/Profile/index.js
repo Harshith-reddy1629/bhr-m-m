@@ -104,6 +104,7 @@ class Profile extends Component {
               className="input-element"
               id="name"
               type="text"
+              onChange={() => {}}
             />
           </li>
           <li className="user-bio-li-items">

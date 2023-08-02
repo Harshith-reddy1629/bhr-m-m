@@ -84,3 +84,11 @@
   color: #343c6a;
   box-shadow: 0 0 0;
 }
+@media (max-width: 575px) {
+  .login-card-container {
+    min-width: 70%;
+  }
+  .logger-btn {
+    padding: 7px;
+  }
+}

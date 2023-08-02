@@ -11,3 +11,12 @@
   border-bottom: 1px solid #e2e2e2;
   color: #343c6a;
 }
+
+@media (max-width: 575px) {
+  .nav-container {
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

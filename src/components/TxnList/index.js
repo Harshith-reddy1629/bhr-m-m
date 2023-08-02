@@ -94,6 +94,7 @@ class TxnList extends Component {
       });
     } catch (error) {
       this.setState({ status: TxnListStatus.Failed });
+      console.log(error);
     }
   };
 
@@ -117,11 +118,13 @@ class TxnList extends Component {
     return threeTxns.length === 0 ? (
       <EmptyView />
     ) : (
-      <table className="transactions-container">
-        {threeTxns.map((each) => (
-          <TransactionsRouteListItems key={each.id} item={each} />
-        ))}
-      </table>
+      <div className="recent-txn-card">
+        <table className="transactions-container">
+          {threeTxns.map((each) => (
+            <TransactionsRouteListItems key={each.id} item={each} />
+          ))}
+        </table>
+      </div>
     );
   };
 

@@ -161,6 +161,7 @@ class TransactionRouteList extends Component {
             <EmptyView />
           </div>
         ) : (
+            <div className='txn-card'> 
           <table className="transactions-container">
             <tr>
               {isAdmin && (
@@ -177,6 +178,7 @@ class TransactionRouteList extends Component {
               <TransactionsRouteListItems key={each.id} item={each} />
             ))}
           </table>
+            </div>
         )}
       </div>
     );

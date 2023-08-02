@@ -107,8 +107,13 @@ class ChartCard extends Component {
     const { Last7DaysTxns } = this.state;
 
     return (
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer
+        className="responsive-container"
+        width="100%"
+        height={400}
+      >
         <BarChart
+          className="bar"
           data={Last7DaysTxns}
           margin={{
             top: 5,
