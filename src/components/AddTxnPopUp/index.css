@@ -69,4 +69,8 @@
     width: 270px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
   }
+  .transaction-btn {
+    border-radius: 4px;
+    background: #2d60ff;
+  }
 }

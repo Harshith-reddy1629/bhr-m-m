@@ -6,14 +6,15 @@
   margin: 15px;
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: 90vh;
-  width: calc(100vw - 290px);
+  max-height: calc(100vh - 95px);
+  width: calc(100vw - 280px);
 }
 @media (max-width: 575px) {
   .account-container {
     width: 100vw;
     margin: 0;
-    min-height: fit-content;
+    /* min-height: fit-content; */
+    max-height: calc(100vh - 180px);
   }
   .txn-card {
     overflow-x: scroll;

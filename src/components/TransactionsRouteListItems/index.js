@@ -62,7 +62,7 @@ const TransactionsRouteListItems = (props) => {
       </td>
       {admin && (
         <td>
-          <UpdateTxnPopup />
+          <UpdateTxnPopup item={item} />
         </td>
       )}
       {admin && (
