@@ -85,7 +85,7 @@ class AddTxnPopUp extends Component {
     const amountValidation = !isNaN(amount) && amount.trim() !== "";
 
     const txnNameValidation =
-      txnName.length > 30 && txnName === ""
+      txnName.length > 30 || txnName === ""
         ? alert("Name should contain below 30 Charecters and cant be empty")
         : true;
 

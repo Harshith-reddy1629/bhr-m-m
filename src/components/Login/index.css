@@ -91,4 +91,10 @@
   .logger-btn {
     padding: 7px;
   }
+  .login-logo {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    height: 30px;
+  }
 }
