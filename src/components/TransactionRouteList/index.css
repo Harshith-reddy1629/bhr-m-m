@@ -1,5 +1,5 @@
 .transactions-route-container {
-  height: calc(100vh - 70px);
+  height: calc(100dvh - 70px);
   overflow-y: scroll;
 }
 .transactions-container {
@@ -41,11 +41,11 @@
 
 @media (max-width: 575px) {
   .transactions-route-container {
-    height: calc(100vh - 200px);
+    height: calc(100dvh - 200px);
   }
   .txn-card {
     overflow-x: scroll;
-    height: calc(100vh - 239px);
+    height: calc(100dvh - 239px);
   }
   .btns-container {
     padding-left: 0;

@@ -6,7 +6,7 @@
   margin: 15px;
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: calc(100vh - 95px);
+  max-height: calc(100dvh - 95px);
   width: calc(100vw - 280px);
 }
 @media (max-width: 575px) {
@@ -14,7 +14,7 @@
     width: 100vw;
     margin: 0;
     /* min-height: fit-content; */
-    max-height: calc(100vh - 180px);
+    max-height: calc(100dvh - 180px);
   }
   .txn-card {
     overflow-x: scroll;
